@@ -1,3 +1,5 @@
+package com.reki.shiro.helloworld;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.config.IniSecurityManagerFactory;
@@ -10,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * Simple Quickstart application showing how to use Shiro's API.
+ * Simple com.reki.shiro.helloworld.Quickstart application showing how to use Shiro's API.
  *
  * @since 0.9 RC2
  */
@@ -45,8 +47,6 @@ public class Quickstart {
         Subject currentUser = SecurityUtils.getSubject();
 
         // Do some stuff with a Session (no need for a web or EJB container!!!)
-        // ����ʹ�� Session
-        // ��ȡ Session: Subject#getSession()
         Session session = currentUser.getSession();
         session.setAttribute("someKey", "aValue");
         String value = (String) session.getAttribute("someKey");
